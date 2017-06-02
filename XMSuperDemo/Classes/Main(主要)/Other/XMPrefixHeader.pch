@@ -1,0 +1,34 @@
+//
+//  XMPrefixHeader.pch
+//  XMSuperDemo
+//
+//  Created by 任长平 on 2016/11/18.
+//  Copyright © 2016年 任长平. All rights reserved.
+//
+
+#ifndef XMPrefixHeader_pch
+#define XMPrefixHeader_pch
+
+#import "Header.h"
+#import "XMBaseViewController.h"
+#import "XMNavigationController.h"
+#import "XMTestViewController.h"
+
+#import "MJExtension.h"
+#import "Masonry.h"
+
+
+#import "UIView+Extension.h"
+#import "UILabel+Extension.h"
+#import "UIButton+XMExtension.h"
+#import "UIColor+XMExtension.h"
+
+
+#import "XMTools.h"
+
+#import "AppDelegate.h"
+
+
+
+
+#endif /* XMPrefixHeader_pch */

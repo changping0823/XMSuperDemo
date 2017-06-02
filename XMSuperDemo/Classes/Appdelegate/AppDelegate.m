@@ -33,29 +33,9 @@
 }
 - (XMTabBarController *)tabbar{
     if (!_tabbar) {
-//        NSArray * selectedImages = @[[UIImage imageNamed:@"首页_on"],
-//                                     [UIImage imageNamed:@"发现_on"],
-//                                     [UIImage imageNamed:@"VIP_on"],
-//                                     [UIImage imageNamed:@"我的_on"]];
-//        NSArray * normalImages =   @[[UIImage imageNamed:@"首页_黑"],
-//                                     [UIImage imageNamed:@"发现_黑"],
-//                                     [UIImage imageNamed:@"VIP_黑"],
-//                                     [UIImage imageNamed:@"我的_黑"]];
-//        
-//        NSArray * titles = @[@"首页",@"发现",@"VIP",@"我的"];
-//        
-//        
+
         XMTabBarController * tabbar = [[XMTabBarController alloc]init];
-//        tabbar.selectedImages = selectedImages;
-//        tabbar.normalImages = normalImages;
-//        tabbar.titles = titles;
-//        
-//        tabbar.textColor = RGBColor(255, 105, 20);
-//        
-//        tabbar.viewControllers = @[[self navigation:@"XMHomeViewController"],
-//                                   [self navigation:@"XMDiscoverViewController"],
-//                                   [self navigation:@"XMVIPViewController"],
-//                                   [self navigation:@"XMMyViewController"]];
+
         _tabbar = tabbar;
     }
     return _tabbar;

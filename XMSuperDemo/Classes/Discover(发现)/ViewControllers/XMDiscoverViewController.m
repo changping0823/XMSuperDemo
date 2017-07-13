@@ -10,7 +10,9 @@
 #import "XMWebViewController.h"
 #import "XMTestView.h"
 
-@interface XMDiscoverViewController ()<UITableViewDelegate,UITableViewDataSource>
+#import <MessageUI/MessageUI.h>
+
+@interface XMDiscoverViewController ()<UITableViewDelegate,UITableViewDataSource,MFMessageComposeViewControllerDelegate>
 
 @property(nonatomic, strong)NSMutableArray *array;
 
@@ -38,10 +40,34 @@
 }
 
 -(void)rightBarButtonItemClick{
-    [self.array addObject:@(self.array.count)];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForItem:self.array.count - 1 inSection:0];
-    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationRight];
-    [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+    
+    NSArray *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
+    NSString *pathHome = [path objectAtIndex:0];
+    NSString *filePath = [pathHome stringByAppendingPathComponent:@"info.txt"];
+    if( [MFMailComposeViewController canSendMail] ){
+        MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
+        picker.mailComposeDelegate = self;
+        
+        [picker setSubject:@" "];
+        
+        
+        NSLog(@"filePath = %@",filePath);
+        
+        NSData* data = [NSData dataWithContentsOfFile:filePath];
+        [picker addAttachmentData:data mimeType:@"txt" fileName:@"info.txt"];
+        
+        NSString *emailBody = @" ";
+        [picker setMessageBody:emailBody isHTML:YES];
+        
+        [self presentModalViewController:picker animated:YES];
+    }
+
+    
+    
+//    [self.array addObject:@(self.array.count)];
+//    NSIndexPath *indexPath = [NSIndexPath indexPathForItem:self.array.count - 1 inSection:0];
+//    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationRight];
+//    [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
 }
 
 -(void)leftBarButtonItemClick{

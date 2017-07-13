@@ -8,13 +8,19 @@
 
 #import "XMMyViewController.h"
 #import "UITextField+Extension.h"
+#import "UIImage+XMExtension.h"
 
 
-static NSString *const TestBURL = @"databank://";
+static NSString *const TestBURL = @"mqq://im/chat?chat_type=wpa&uin=993195264&version=1&src_type=web";
+
+//打开QQ聊天界面（993195264：QQ账号）
+//static NSString *const TestBURL = @"mqq://im/chat?chat_type=wpa&uin=993195264&version=1&src_type=web";
+
 
 @interface XMMyViewController ()
 @property (nonatomic, strong) NSMutableArray *views;
 @property(nonatomic, strong)UITextField *textField;
+@property(nonatomic, strong)UIWebView *webView;
 
 @end
 
@@ -23,15 +29,37 @@ static NSString *const TestBURL = @"databank://";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.textField = [[UITextField alloc]init];
-//    self.textField.showKeyboardTool = YES;
-    self.textField.backgroundColor = [UIColor RandomColor];
-    [self.view addSubview:self.textField];
+    self.webView = [[UIWebView alloc]init];
+    [self.view addSubview:self.webView];
     
-    [self.textField mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.size.mas_equalTo(CGSizeMake(200, 40));
-        make.center.mas_equalTo(self.view);
+    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://appnew.antsoo.com:82/entryCompany.html"]]];
+    
+    [self.webView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(self.view);
     }];
+    
+//    UIImage * image = [UIImage imageNamed:@"filter"];
+//    [image circleImage];
+//    
+//    UIImageView * imageView = [[UIImageView alloc]init];
+//    [self.view addSubview:imageView];
+//    imageView.image = image;
+//    
+//    [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.size.mas_equalTo(CGSizeMake(200, 200));
+//        make.left.mas_equalTo(self.view);
+//        make.top.mas_equalTo(self.view).offset(64);
+//    }];
+//    
+//    self.textField = [[UITextField alloc]init];
+////    self.textField.showKeyboardTool = YES;
+//    self.textField.backgroundColor = [UIColor RandomColor];
+//    [self.view addSubview:self.textField];
+//    
+//    [self.textField mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.size.mas_equalTo(CGSizeMake(200, 40));
+//        make.center.mas_equalTo(self.view);
+//    }];
 }
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{

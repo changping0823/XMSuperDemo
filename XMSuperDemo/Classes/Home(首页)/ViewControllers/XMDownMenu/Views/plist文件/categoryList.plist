@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>baseFirstCategoryId</key>
+		<integer>3</integer>
+		<key>baseFirstCategoryName</key>
+		<string>通用塑料</string>
+	</dict>
+	<dict>
+		<key>baseFirstCategoryId</key>
+		<integer>4</integer>
+		<key>baseFirstCategoryName</key>
+		<string>工程塑料</string>
+	</dict>
+	<dict>
+		<key>baseFirstCategoryId</key>
+		<integer>5</integer>
+		<key>baseFirstCategoryName</key>
+		<string>特种工程塑料</string>
+	</dict>
+	<dict>
+		<key>baseFirstCategoryId</key>
+		<integer>6</integer>
+		<key>baseFirstCategoryName</key>
+		<string>热塑性弹性体</string>
+	</dict>
+	<dict>
+		<key>baseFirstCategoryId</key>
+		<integer>7</integer>
+		<key>baseFirstCategoryName</key>
+		<string>合金</string>
+	</dict>
+	<dict>
+		<key>baseFirstCategoryId</key>
+		<integer>8</integer>
+		<key>baseFirstCategoryName</key>
+		<string>橡胶</string>
+	</dict>
+	<dict>
+		<key>baseFirstCategoryId</key>
+		<integer>9</integer>
+		<key>baseFirstCategoryName</key>
+		<string>其他</string>
+	</dict>
+</array>
+</plist>

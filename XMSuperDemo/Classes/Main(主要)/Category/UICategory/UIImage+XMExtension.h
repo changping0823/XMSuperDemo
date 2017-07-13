@@ -13,4 +13,6 @@
  *   纯色图片
  */
 + (UIImage *)imageWithColor:(UIColor *)color;
+- (UIImage *)circleImage;
+-(UIImage *)imageCornerRadius:(CGFloat)radius;
 @end

@@ -22,6 +22,7 @@
 #import "UILabel+Extension.h"
 #import "UIButton+XMExtension.h"
 #import "UIColor+XMExtension.h"
+#import "UINavigationBar+Extension.h"
 
 
 #import "XMTools.h"

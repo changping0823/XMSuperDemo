@@ -13,6 +13,7 @@
 #import "XMMediaLibraryViewController.h"
 #import "XMWKWebViewController.h"
 #import "XMHTMLViewController.h"
+#import "XMDownMenuViewController.h"
 
 NSString * const TestViewController         = @"XMTestViewController";
 NSString * const CitySearchViewController   = @"XMCitySearchViewController";
@@ -21,7 +22,8 @@ NSString * const DrawingViewController      = @"XMDrawingViewController";
 NSString * const MediaLibraryViewController = @"XMMediaLibraryViewController";
 NSString * const WKWebViewController        = @"XMWKWebViewController";
 NSString * const HTMLViewController         = @"XMHTMLViewController";
-
+NSString * const AddressBookViewController  = @"XMAddressBookViewController";
+NSString * const DownMenuViewController     = @"XMDownMenuViewController";
 
 @interface XMHomeViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView    * tableView;
@@ -33,12 +35,8 @@ NSString * const HTMLViewController         = @"XMHTMLViewController";
 @implementation XMHomeViewController
 
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-
-    
     
     [self.viewControllers addObject:TestViewController];
     [self.viewControllers addObject:CitySearchViewController];
@@ -47,6 +45,13 @@ NSString * const HTMLViewController         = @"XMHTMLViewController";
     [self.viewControllers addObject:MediaLibraryViewController];
     [self.viewControllers addObject:WKWebViewController];
     [self.viewControllers addObject:HTMLViewController];
+    [self.viewControllers addObject:AddressBookViewController];
+    [self.viewControllers addObject:DownMenuViewController];
+    
+    
+    [self.navigationController.navigationBar xm_setBackgroundColor:RGBColor(250, 228, 0)];
+//    [self.navigationController.navigationBar xm_setElementsAlpha:0.5];
+    
     [self.view addSubview:self.tableView];
 
 

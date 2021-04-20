@@ -29,7 +29,8 @@ static char xm_overlayKey;
 {
     if (!self.xm_overlay) {
         [self setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
-        self.xm_overlay = [[UIView alloc] initWithFrame:CGRectMake(0, -20, CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds) + 20)];
+        CGFloat statusHeight = [UIApplication sharedApplication].statusBarFrame.size.height;
+        self.xm_overlay = [[UIView alloc] initWithFrame:CGRectMake(0, -statusHeight, CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds) + statusHeight)];
         self.xm_overlay.userInteractionEnabled = NO;
         self.xm_overlay.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
         [self insertSubview:self.xm_overlay atIndex:0];

@@ -14,6 +14,7 @@
 #import "XMWKWebViewController.h"
 #import "XMHTMLViewController.h"
 #import "XMDownMenuViewController.h"
+#import "XMOpenGLESViewController.h"
 
 NSString * const TestViewController         = @"XMTestViewController";
 NSString * const CitySearchViewController   = @"XMCitySearchViewController";
@@ -24,6 +25,7 @@ NSString * const WKWebViewController        = @"XMWKWebViewController";
 NSString * const HTMLViewController         = @"XMHTMLViewController";
 NSString * const AddressBookViewController  = @"XMAddressBookViewController";
 NSString * const DownMenuViewController     = @"XMDownMenuViewController";
+NSString * const OpenGLESViewController     = @"XMOpenGLESViewController";
 
 @interface XMHomeViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView    * tableView;
@@ -47,7 +49,8 @@ NSString * const DownMenuViewController     = @"XMDownMenuViewController";
     [self.viewControllers addObject:HTMLViewController];
     [self.viewControllers addObject:AddressBookViewController];
     [self.viewControllers addObject:DownMenuViewController];
-    
+    [self.viewControllers addObject:OpenGLESViewController];
+
     
     [self.navigationController.navigationBar xm_setBackgroundColor:RGBColor(250, 228, 0)];
 //    [self.navigationController.navigationBar xm_setElementsAlpha:0.5];

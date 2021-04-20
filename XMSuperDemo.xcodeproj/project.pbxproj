@@ -115,6 +115,7 @@
 		6DD7214E1EC59B9C003C2915 /* XMWKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD7214D1EC59B9C003C2915 /* XMWKWebViewController.m */; };
 		6DD9F6CF1E8E201700DEFB50 /* XMTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD9F6CE1E8E201700DEFB50 /* XMTabBarController.m */; };
 		6DD9F6D21E8E222100DEFB50 /* XMNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD9F6D11E8E222100DEFB50 /* XMNavigationController.m */; };
+		76304BDF262EC1C500DEDA57 /* XMOpenGLESViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76304BDE262EC1C500DEDA57 /* XMOpenGLESViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -341,6 +342,8 @@
 		6DD9F6CE1E8E201700DEFB50 /* XMTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMTabBarController.m; sourceTree = "<group>"; };
 		6DD9F6D01E8E222100DEFB50 /* XMNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMNavigationController.h; sourceTree = "<group>"; };
 		6DD9F6D11E8E222100DEFB50 /* XMNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMNavigationController.m; sourceTree = "<group>"; };
+		76304BDD262EC1C500DEDA57 /* XMOpenGLESViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMOpenGLESViewController.h; sourceTree = "<group>"; };
+		76304BDE262EC1C500DEDA57 /* XMOpenGLESViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMOpenGLESViewController.m; sourceTree = "<group>"; };
 		C2EF7DBB886EC03EC5514E47 /* Pods-XMSuperDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XMSuperDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-XMSuperDemo/Pods-XMSuperDemo.release.xcconfig"; sourceTree = "<group>"; };
 		E6101CFAF575E83310A34C8C /* libPods-XMSuperDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XMSuperDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -534,9 +537,9 @@
 		6D46CAA81DDE9BF400BAF2F0 /* Home(首页) */ = {
 			isa = PBXGroup;
 			children = (
-				6D46CAA91DDE9BF400BAF2F0 /* Models */,
 				6D46CAAA1DDE9BF400BAF2F0 /* ViewControllers */,
 				6D46CAAB1DDE9BF400BAF2F0 /* Views */,
+				6D46CAA91DDE9BF400BAF2F0 /* Models */,
 			);
 			path = "Home(首页)";
 			sourceTree = "<group>";
@@ -555,6 +558,7 @@
 				6D46CADA1DDEBEFA00BAF2F0 /* XMHomeViewController.m */,
 				6DD7214C1EC59B9C003C2915 /* XMWKWebViewController.h */,
 				6DD7214D1EC59B9C003C2915 /* XMWKWebViewController.m */,
+				76304BDB262EC18400DEDA57 /* OpenGLES */,
 				6D9B098A1F04FEEE00A1A6BB /* XMDownMenu */,
 				6DB4AD871EC94A15002F32A1 /* HTML */,
 				6D5AB6881EBB2CE700B6E6DD /* MediaLibrary(媒体库) */,
@@ -1145,6 +1149,23 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		76304BDB262EC18400DEDA57 /* OpenGLES */ = {
+			isa = PBXGroup;
+			children = (
+				76304BDC262EC1A500DEDA57 /* ViewControllers */,
+			);
+			path = OpenGLES;
+			sourceTree = "<group>";
+		};
+		76304BDC262EC1A500DEDA57 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				76304BDD262EC1C500DEDA57 /* XMOpenGLESViewController.h */,
+				76304BDE262EC1C500DEDA57 /* XMOpenGLESViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		90B9CC3D36010A73FE1F2949 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1246,6 +1267,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -1369,6 +1391,7 @@
 				6D89DEFA1EC066400095A788 /* IFBrannanFilter.m in Sources */,
 				6D287D701EE8EB2900480EDA /* XMAddressBook.m in Sources */,
 				6D89DEFC1EC066400095A788 /* IFHefeFilter.m in Sources */,
+				76304BDF262EC1C500DEDA57 /* XMOpenGLESViewController.m in Sources */,
 				6D89DF081EC066400095A788 /* IFValenciaFilter.m in Sources */,
 				6D4AE8411DED4E6000BBEB27 /* XMSwipeTestViewController.m in Sources */,
 				6D89DEF81EC066400095A788 /* IF1977Filter.m in Sources */,

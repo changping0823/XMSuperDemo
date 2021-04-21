@@ -116,6 +116,9 @@
 		6DD9F6CF1E8E201700DEFB50 /* XMTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD9F6CE1E8E201700DEFB50 /* XMTabBarController.m */; };
 		6DD9F6D21E8E222100DEFB50 /* XMNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD9F6D11E8E222100DEFB50 /* XMNavigationController.m */; };
 		76304BDF262EC1C500DEDA57 /* XMOpenGLESViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76304BDE262EC1C500DEDA57 /* XMOpenGLESViewController.m */; };
+		7639C8B62630048700C1386A /* XMOpenGLESView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7639C8B52630048700C1386A /* XMOpenGLESView.m */; };
+		7639C8C126300DAC00C1386A /* XMVertexAttribArrayBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7639C8C026300DAC00C1386A /* XMVertexAttribArrayBuffer.m */; };
+		7639C8C6263014FE00C1386A /* dilireba.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 7639C8C5263014FE00C1386A /* dilireba.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -344,6 +347,11 @@
 		6DD9F6D11E8E222100DEFB50 /* XMNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMNavigationController.m; sourceTree = "<group>"; };
 		76304BDD262EC1C500DEDA57 /* XMOpenGLESViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMOpenGLESViewController.h; sourceTree = "<group>"; };
 		76304BDE262EC1C500DEDA57 /* XMOpenGLESViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMOpenGLESViewController.m; sourceTree = "<group>"; };
+		7639C8B42630048700C1386A /* XMOpenGLESView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMOpenGLESView.h; sourceTree = "<group>"; };
+		7639C8B52630048700C1386A /* XMOpenGLESView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMOpenGLESView.m; sourceTree = "<group>"; };
+		7639C8BF26300DAC00C1386A /* XMVertexAttribArrayBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMVertexAttribArrayBuffer.h; sourceTree = "<group>"; };
+		7639C8C026300DAC00C1386A /* XMVertexAttribArrayBuffer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMVertexAttribArrayBuffer.m; sourceTree = "<group>"; };
+		7639C8C5263014FE00C1386A /* dilireba.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dilireba.jpeg; sourceTree = "<group>"; };
 		C2EF7DBB886EC03EC5514E47 /* Pods-XMSuperDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XMSuperDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-XMSuperDemo/Pods-XMSuperDemo.release.xcconfig"; sourceTree = "<group>"; };
 		E6101CFAF575E83310A34C8C /* libPods-XMSuperDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XMSuperDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -692,6 +700,7 @@
 		6D46CAC41DDE9BF400BAF2F0 /* Resources(资源) */ = {
 			isa = PBXGroup;
 			children = (
+				7639C8C5263014FE00C1386A /* dilireba.jpeg */,
 				6D46CB051DDECAE800BAF2F0 /* iconfont.ttf */,
 				6D5BE5B31EBC67F100418BA8 /* test.mp4 */,
 				6D69AC671DFFCA090060DCC2 /* fakeStatus.plist */,
@@ -1153,6 +1162,8 @@
 			isa = PBXGroup;
 			children = (
 				76304BDC262EC1A500DEDA57 /* ViewControllers */,
+				7639C8B32630045500C1386A /* Views */,
+				7639C8BE26300D0C00C1386A /* Models */,
 			);
 			path = OpenGLES;
 			sourceTree = "<group>";
@@ -1164,6 +1175,24 @@
 				76304BDE262EC1C500DEDA57 /* XMOpenGLESViewController.m */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7639C8B32630045500C1386A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7639C8B42630048700C1386A /* XMOpenGLESView.h */,
+				7639C8B52630048700C1386A /* XMOpenGLESView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7639C8BE26300D0C00C1386A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7639C8BF26300DAC00C1386A /* XMVertexAttribArrayBuffer.h */,
+				7639C8C026300DAC00C1386A /* XMVertexAttribArrayBuffer.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		90B9CC3D36010A73FE1F2949 /* Pods */ = {
@@ -1301,6 +1330,7 @@
 				6D46CB0C1DDEF30B00BAF2F0 /* Districts.xml in Resources */,
 				6D69AC681DFFCA090060DCC2 /* fakeStatus.plist in Resources */,
 				6D46CA7A1DDE988C00BAF2F0 /* Assets.xcassets in Resources */,
+				7639C8C6263014FE00C1386A /* dilireba.jpeg in Resources */,
 				6D46CA781DDE988C00BAF2F0 /* Main.storyboard in Resources */,
 				6D89DEF71EC066400095A788 /* GPUImage.InstagramFilter.bundle in Resources */,
 			);
@@ -1393,6 +1423,7 @@
 				6D89DEFC1EC066400095A788 /* IFHefeFilter.m in Sources */,
 				76304BDF262EC1C500DEDA57 /* XMOpenGLESViewController.m in Sources */,
 				6D89DF081EC066400095A788 /* IFValenciaFilter.m in Sources */,
+				7639C8C126300DAC00C1386A /* XMVertexAttribArrayBuffer.m in Sources */,
 				6D4AE8411DED4E6000BBEB27 /* XMSwipeTestViewController.m in Sources */,
 				6D89DEF81EC066400095A788 /* IF1977Filter.m in Sources */,
 				6D69AC6E1DFFCD680060DCC2 /* XMStatusCell.m in Sources */,
@@ -1423,6 +1454,7 @@
 				6D89DF101EC079EE0095A788 /* XMTools.m in Sources */,
 				6DC37E761ECA95080030484B /* XMAnimationButton.m in Sources */,
 				6DD9F6D21E8E222100DEFB50 /* XMNavigationController.m in Sources */,
+				7639C8B62630048700C1386A /* XMOpenGLESView.m in Sources */,
 				6D5AB6841EBACC2300B6E6DD /* XMAnimationText.m in Sources */,
 				6D89DEFD1EC066400095A788 /* IFHudsonFilter.m in Sources */,
 				6D89DF0C1EC066400095A788 /* GPUImageFourInputFilter.m in Sources */,

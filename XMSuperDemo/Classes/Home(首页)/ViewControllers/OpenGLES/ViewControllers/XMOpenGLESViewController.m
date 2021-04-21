@@ -7,10 +7,10 @@
 //
 
 #import "XMOpenGLESViewController.h"
-#import <GLKit/GLKit.h>
+#import "XMOpenGLESView.h"
 
 @interface XMOpenGLESViewController ()
-@property (nonatomic, strong) EAGLContext *mContext;
+@property (nonatomic, strong) XMOpenGLESView *contentView;
 @end
 
 @implementation XMOpenGLESViewController
@@ -20,10 +20,17 @@
     [self setupConfig];
 }
 - (void)setupConfig{
-    self.mContext = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES3];
-    GLKView* view = [[GLKView alloc] initWithFrame:self.view.bounds context:self.mContext]; //storyboard记得添加
-    view.drawableColorFormat = GLKViewDrawableColorFormatRGBA8888;  //颜色缓冲区格式
-    [EAGLContext setCurrentContext:self.mContext];
+    self.contentView = [[XMOpenGLESView alloc] init];
+    [self.view addSubview:self.contentView];
+    
+//    self.contentView.springDelegate = self;
+    [self.contentView updateImage:[UIImage imageNamed:@"dilireba.jpeg"]];
+    
+    [self.contentView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(UIEdgeInsetsMake(100, 20, 60, 20));
+    }];
 }
+
+
 
 @end
